@@ -1,29 +1,24 @@
 body {
-  background: linear-gradient(to right, #1f1c2c, #928dab);
-  font-family: 'Courier New', monospace;
-  color: white;
-  margin: 0;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  flex-direction: column;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #1f1f1f;
+    overflow: hidden;
+    background-color: #c7c7c7;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23000000' fill-opacity='0.4' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
 }
 
 .container {
-  text-align: center;
-}
-
-.glitch {
-  font-size: 1.5rem;
-  animation: glitch 1s infinite;
-}
-
-@keyframes glitch {
-  0% { text-shadow: 2px 2px red; }
-  25% { text-shadow: -2px -2px blue; }
-  50% { text-shadow: 2px -2px green; }
-  75% { text-shadow: -2px 2px yellow; }
-  100% { text-shadow: 2px 2px red; }
+    width: 500px;
+    height: 500px;
+    background-color: rgba(139, 139, 139, 0.5); /* slightly transparent */
+    border-radius: 999px;
+    backdrop-filter: blur(20px); /* adds blur to background behind */
+    -webkit-backdrop-filter: blur(20px); /* Safari support */
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
