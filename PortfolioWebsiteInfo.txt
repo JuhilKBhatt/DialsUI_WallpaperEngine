@@ -1,0 +1,14 @@
+{
+  "title": "Wings Of Freedom Web Wallpaper",
+  "description": "",
+  "language": ["Wallpaper Engine", "JavaScript", "HTML", "CSS"],
+  "liveDemo": "",
+  "images": [
+    "",
+  ],
+  "videoDemo": "",
+  "Priority": 3,
+  "type": "Solo",
+  "version": "Prod",
+  "Visibilty": true
+}
