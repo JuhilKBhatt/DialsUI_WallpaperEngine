@@ -1,0 +1,29 @@
+body {
+  background: linear-gradient(to right, #1f1c2c, #928dab);
+  font-family: 'Courier New', monospace;
+  color: white;
+  margin: 0;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+}
+
+.container {
+  text-align: center;
+}
+
+.glitch {
+  font-size: 1.5rem;
+  animation: glitch 1s infinite;
+}
+
+@keyframes glitch {
+  0% { text-shadow: 2px 2px red; }
+  25% { text-shadow: -2px -2px blue; }
+  50% { text-shadow: 2px -2px green; }
+  75% { text-shadow: -2px 2px yellow; }
+  100% { text-shadow: 2px 2px red; }
+}
