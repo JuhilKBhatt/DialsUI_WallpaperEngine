@@ -25,7 +25,7 @@ function updateTime() {
 setInterval(updateTime, 1000);
 updateTime();
 
-// ========== Initialize Knobs ==========
+// Initialize Knobs
 function createKnob(label, min, max, color) {
   const dialSize = Math.min(window.innerWidth, window.innerHeight) * 0.15;
   const knob = pureknob.createKnob(dialSize, dialSize);
@@ -51,7 +51,7 @@ document.getElementById('cpuDial').appendChild(cpuKnob.node());
 document.getElementById('ramDial').appendChild(ramKnob.node());
 document.getElementById('fanDial').appendChild(fanKnob.node());
 
-// ========== Wallpaper Engine Bindings ==========
+// Wallpaper Engine Bindings
 window.wallpaperPropertyListener = {
   setCpuUsage: function (cpu) {
     const value = Math.round(cpu * 100);
