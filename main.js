@@ -51,17 +51,19 @@ document.getElementById('cpuDial').appendChild(cpuKnob.node());
 document.getElementById('ramDial').appendChild(ramKnob.node());
 document.getElementById('fanDial').appendChild(fanKnob.node());
 
-// Wallpaper Engine Bindings
-window.wallpaperPropertyListener = {
-  setCpuUsage: function (cpu) {
-    const value = Math.round(cpu * 100);
-    cpuKnob.setValue(value);
-  },
-  setMemoryUsage: function (mem) {
-    const value = Math.round(mem * 100);
-    ramKnob.setValue(value);
-  },
-  setFanSpeed: function (speed) {
-    fanKnob.setValue(speed);
-  }
-};
+// Simulate system values with semi-random updates
+function simulateUsage(knob, min, max, step = 5) {
+  let value = Math.random() * (max - min) + min;
+
+  setInterval(() => {
+    // Add small variation
+    const delta = (Math.random() * step * 2) - step;
+    value = Math.min(max, Math.max(min, value + delta));
+    knob.setValue(Math.round(value));
+  }, 1000);
+}
+
+// Start simulation
+simulateUsage(cpuKnob, 10, 90);      // CPU %
+simulateUsage(ramKnob, 20, 80);      // RAM %
+simulateUsage(fanKnob, 800, 3600);   // Fan RPM
