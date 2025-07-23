@@ -2,9 +2,9 @@
 
 body {
   margin: 0;
-  background: #0f0f1a;
+  background: #E0CA3C;
   font-family: 'Orbitron', sans-serif;
-  color: #00ffcc;
+  color: #0f0f0f;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -12,22 +12,35 @@ body {
 }
 
 .hud {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 50px;
+  display: flex;
+  align-items: center;
+  gap: 40px;
   text-align: center;
 }
 
 .dial {
-  border: none;
   width: 150px;
   height: 150px;
   display: flex;
   justify-content: center;
   align-items: center;
+	margin: 40px;
 }
 
 .clock {
-  grid-column: span 3;
-  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 10px;
+}
+
+.clock #time {
+  font-size: 48px;
+  margin: 0;
+}
+
+.clock #date {
+  font-size: 24px;
+  margin: 0;
 }

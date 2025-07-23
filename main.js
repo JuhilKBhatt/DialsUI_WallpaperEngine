@@ -15,7 +15,7 @@ function createKnob(label, min, max, color) {
   knob.setProperty('angleEnd', 0.75 * Math.PI);
   knob.setProperty('colorFG', color);
   knob.setProperty('colorBG', '#333');
-  knob.setProperty('trackWidth', 0.3);
+  knob.setProperty('trackWidth', 0.5);
   knob.setProperty('valMin', min);
   knob.setProperty('valMax', max);
   knob.setProperty('val', 0);
