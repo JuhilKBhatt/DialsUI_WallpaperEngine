@@ -27,12 +27,13 @@ updateTime();
 
 // ========== Initialize Knobs ==========
 function createKnob(label, min, max, color) {
-  const knob = pureknob.createKnob(150, 150);
+  const dialSize = Math.min(window.innerWidth, window.innerHeight) * 0.15;
+  const knob = pureknob.createKnob(dialSize, dialSize);
   knob.setProperty('angleStart', -0.75 * Math.PI);
   knob.setProperty('angleEnd', 0.75 * Math.PI);
   knob.setProperty('colorFG', color);
   knob.setProperty('colorBG', '#333');
-  knob.setProperty('trackWidth', 0.5);
+  knob.setProperty('trackWidth', 0.4);
   knob.setProperty('valMin', min);
   knob.setProperty('valMax', max);
   knob.setProperty('val', 0);
