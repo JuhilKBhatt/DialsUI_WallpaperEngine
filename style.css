@@ -1,3 +1,5 @@
+/* ./style.css */
+
 body {
   margin: 0;
   background: #0f0f1a;
@@ -17,8 +19,7 @@ body {
 }
 
 .dial {
-  border: 2px solid #00ffcc;
-  border-radius: 50%;
+  border: none;
   width: 150px;
   height: 150px;
   display: flex;

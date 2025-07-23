@@ -8,18 +8,42 @@ function updateTime() {
 setInterval(updateTime, 1000);
 updateTime();
 
-// Wallpaper Engine bindings
+// ========== Initialize Knobs ==========
+function createKnob(label, min, max, color) {
+  const knob = pureknob.createKnob(150, 150);
+  knob.setProperty('angleStart', -0.75 * Math.PI);
+  knob.setProperty('angleEnd', 0.75 * Math.PI);
+  knob.setProperty('colorFG', color);
+  knob.setProperty('colorBG', '#333');
+  knob.setProperty('trackWidth', 0.3);
+  knob.setProperty('valMin', min);
+  knob.setProperty('valMax', max);
+  knob.setProperty('val', 0);
+  knob.setProperty('label', label);
+  knob.setProperty('readonly', true);
+  return knob;
+}
+
+const cpuKnob = createKnob('CPU', 0, 100, '#00ffcc');
+const ramKnob = createKnob('RAM', 0, 100, '#ff0099');
+const fanKnob = createKnob('FAN', 0, 5000, '#ffaa00');
+
+// Mount knobs
+document.getElementById('cpuDial').appendChild(cpuKnob.node());
+document.getElementById('ramDial').appendChild(ramKnob.node());
+document.getElementById('fanDial').appendChild(fanKnob.node());
+
+// ========== Wallpaper Engine Bindings ==========
 window.wallpaperPropertyListener = {
-  applyUserProperties: function (properties) {
-    // Optional: if using color or toggle settings
-  },
   setCpuUsage: function (cpu) {
-    document.getElementById('cpuUsage').textContent = Math.round(cpu * 100) + '%';
+    const value = Math.round(cpu * 100);
+    cpuKnob.setValue(value);
   },
   setMemoryUsage: function (mem) {
-    document.getElementById('ramUsage').textContent = Math.round(mem * 100) + '%';
+    const value = Math.round(mem * 100);
+    ramKnob.setValue(value);
   },
   setFanSpeed: function (speed) {
-    document.getElementById('fanSpeed').textContent = speed + ' RPM';
+    fanKnob.setValue(speed);
   }
 };

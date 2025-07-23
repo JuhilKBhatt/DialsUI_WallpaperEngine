@@ -1,3 +1,4 @@
+<!-- ./index.js -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,15 +7,17 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="hud">
-    <div class="dial" id="cpuDial"><p>CPU: <span id="cpuUsage">0%</span></p></div>
-    <div class="dial" id="ramDial"><p>RAM: <span id="ramUsage">0%</span></p></div>
-    <div class="dial" id="fanDial"><p>Fan: <span id="fanSpeed">0 RPM</span></p></div>
-    <div class="clock">
-      <p id="time">--:--</p>
-      <p id="date">----</p>
-    </div>
-  </div>
-  <script src="main.js"></script>
+	<div class="hud">
+		<div class="dial" id="cpuDial"></div>
+		<div class="dial" id="fanDial"></div>
+		<div class="dial" id="ramDial"></div>
+
+		<div class="clock">
+			<p id="time">--:--</p>
+			<p id="date">----</p>
+		</div>
+	</div>
+	<script src="./scripts/pureknob.js"></script>
+	<script src="./main.js"></script>
 </body>
 </html>
