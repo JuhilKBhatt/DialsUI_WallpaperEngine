@@ -1,0 +1,14 @@
+{
+  "title": "Fake Dials Web Wallpaper",
+  "description": " A Wallpaper Engine project that features a collection of fake dials, designed to be visually appealing and interactive. The wallpaper also showcases a clock.",
+  "language": ["Wallpaper Engine", "JavaScript", "HTML", "CSS"],
+  "liveDemo": "https://steamcommunity.com/sharedfiles/filedetails/?id=3532345201",
+  "images": [
+    "https://res.cloudinary.com/dmj4ggkjq/image/upload/v1753260922/DialsUI_WallPaperEngine-img-1_ydy89l.png"
+  ],
+  "videoDemo": "https://res.cloudinary.com/dmj4ggkjq/video/upload/v1753260988/DialsUI_WallpaperEngine-Video_qmaa1j.mov",
+  "Priority": 3,
+  "type": "Solo",
+  "version": "Prod",
+  "Visibilty": true
+}
