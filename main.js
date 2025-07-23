@@ -2,9 +2,26 @@
 
 function updateTime() {
   const now = new Date();
-  document.getElementById('time').textContent = now.toLocaleTimeString();
-  document.getElementById('date').textContent = now.toDateString();
+
+  // Format time
+  let hours = now.getHours();
+  const minutes = now.getMinutes();
+  const seconds = now.getSeconds();
+  const ampm = hours >= 12 ? 'PM' : 'AM';
+  hours = hours % 12 || 12; // convert to 12-hour format
+
+  const padded = (n) => n.toString().padStart(2, '0');
+  const timeString = `${padded(hours)}:${padded(minutes)}:${padded(seconds)} ${ampm}`;
+
+  // Format date
+  const weekdayNames = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+  const weekday = weekdayNames[now.getDay()];
+  const dateString = `${weekday}, ${padded(now.getDate())}/${padded(now.getMonth() + 1)}/${now.getFullYear()}`;
+
+  document.getElementById('time').textContent = timeString;
+  document.getElementById('date').textContent = dateString;
 }
+
 setInterval(updateTime, 1000);
 updateTime();
 
